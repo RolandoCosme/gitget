@@ -14,15 +14,21 @@ $(document).ready(function() {
     })
   });
 
-  function buildTableRow(commitData) {
-    var shaTd = $("<td>").append(commitData.sha);
-    var authorTd = $("<td>").append(commitData.author.login);
-    var messageTd = $("<td>").append(commitData.commit.message);
-    var dateTd = $("<td>").append(commitData.commit.author.date);
+  function buildCommitsGroup(commitData) {
+    var commitsApiUrl = "https://api.github.com/repos/rolandocosme/";
+     commitsApiUrl += commitData.name + "/";
+     commitsApiUrl += "commits/";
+}
 
-    return $("<tr>").append(shaTd)
-      .append(authorTd)
-      .append(messageTd)
-      .append(dateTd);
+  function buildTableRow(commitData) {
+    var dateTd = $("<td>").append(commitData.commit.date);
+    // var emailTd = $("<td>").append(commitData.author.email);
+    // var messageTd = $("<td>").append(commitData.commit.message);
+    // var dateTd = $("<td>").append(commitData.commit.author.date);
+
+    return $("<tr>").append(dateTd)
+      // .append(emailTd)
+      // .append(messageTd)
+      //.append(dateTd);
   }
 });
