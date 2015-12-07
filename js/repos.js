@@ -13,12 +13,14 @@ $(document).ready(function() {
     }
   });
 
-  function buildListGroup(repoData) {
-    var commitsApiUrl = "https://api.github.com/users/rolandocosme/repos";
+  function buildListGroup(commitData) {
+    var commitsApiUrl = "https://api.github.com/repos/rolandocosme/";
+     commitsApiUrl += commitData.name + "/";
+     commitsApiUrl += "commits";
     var newLink = $("<a>")
       .attr("href", commitsApiUrl)
       .addClass("list-group-item")
-      .append(repoData.full_name);
+      .append(commitData.full_name);
     return newLink;
   }
 });
@@ -38,12 +40,3 @@ $(document).ready(function() {
 
 
 
-
-// github aip token  3ff610c2687cf6f717784a4146d80e49d89e77f0
-// 3ff610c2687cf6f717784a4146d80e49d89e77f0
-// curl https://api.github.com/?access_token=3ff610c2687cf6f717784a4146d80e49d89e77f0
-// curl https://api.github.com/users/rolandocosme
-
-//GET /repos/:owner/:repo/git/commits/
-
-// https://api.github.com/repos/rolandocosme/bootstack/commits
