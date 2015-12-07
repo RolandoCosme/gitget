@@ -25,18 +25,6 @@ $(document).ready(function() {
   }
 });
 
-//   function buildCommitsGroup(commitData) {
-//     var commitsApiUrl = "https://api.github.com/repos/rolandocosme/";
-//      commitsApiUrl += commitData.name + "/";
-//      commitsApiUrl += "commits/";
-   
-//     var newCommitData = $("<th>")
-//       .attr("href", commitsApiUrl)
-//       .addClass("list-group-item")
-//       .append(commitData.date);
-//     return newCommitData;
-//   }
-// });
 
 
 
